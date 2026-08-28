@@ -30,6 +30,6 @@ class Solution:
 
         dZ_dW = x
 
-        dL_dw = np.round( error * y_hat * (1-y_hat) * x,5)
+        dL_dw = np.round( error * y_hat * (1-y_hat) * x,5) #same as using chaing rule explanation above dL_dw = np.round( dL_dy_hat * dy_hat_dZ * dZ_dW,5)
         dL_db = np.round(error * y_hat * (1-y_hat), 5)
         return (dL_dw, dL_db)
